@@ -1,0 +1,16 @@
+title: forky_test
+description: yo
+template:
+  repo: forky_test-template
+  name: forky_test
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
